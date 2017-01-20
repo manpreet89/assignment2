@@ -1,0 +1,38 @@
+# create your Kivy layout in the kv language here
+Boxlayout
+    orientation: 'horizontal'
+    boxlayout:
+        orientation: 'vertical'
+        size_hint_x: 0.25
+        Button:
+            text: 'List Required'
+        Button:
+            text: 'list completed'
+    Boxlayout:
+        orientation: 'vertical'
+        Label:
+            text: 'Add new book...'
+        Label:
+            text: 'title'
+            Text input:
+                text: ''
+        Label:
+             text: 'author'
+            Text input:
+                Text:''
+            Button:
+                Text: 'Add item'
+            Button:
+                text: 'clear'
+
+        Boxlayout
+            orientation: 'vertical'
+            label:
+                text: ' Total pages to read '
+                size_hint_y: 0.1
+            Boxlayout:
+                orientation: 'vertical'
+            id: itembox
+            label:
+                text: 'click books to mark tyhem as completed.'
+                size_hint_y: 0.1
